@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitanotion Training - HTML Class</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="handlers/assets/fonts/montserrat-cufonfonts-webfont/style.css"/>
+    <link rel="stylesheet" href="handlers/assets/fonts/inter-cufonfonts-webfont/style.css"/>
+    <link rel="stylesheet" href="handlers/css/bootstrap.min.css">
+    <link rel="stylesheet" href="handlers/css/verification.css" />
+  </head>
+  <body>
+    <!--Main body-->
+    <main id="mobile-body">
+      <!--Logo container-->
+      <div class="logo-container">
+        <img src="handlers/assets/images/whatch-app-logo.png" alt="whatch-app-logo" />
+      </div>
+
+      <!--Header and description section-->
+      <div class="text-center">
+        <h3 class="text-white header">Number Verification</h3>
+        <p class="description">
+          Please enter the 4 digit code sent to your mobile number for
+          verification
+        </p>
+      </div>
+
+      <!--4-digit verification inputs-->
+      <div class="verification d-flex justify-content-center">
+        <form name="formName">
+          <input class="me-4" name="inputNameZero" maxlength="1" oninput="autotab(this, document.formName.inputNameOne);" type="text" />
+          <input class="me-4" name="inputNameOne" maxlength="1" oninput="autotab(this, document.formName.inputNameTwo); checkForEmptyValue(this, document.formName.inputNameZero);" type="text" />
+          <input class="me-4" name="inputNameTwo" maxlength="1" oninput="autotab(this, document.formName.inputNameThree); checkForEmptyValue(this, document.formName.inputNameOne);" type="text" />
+          <input maxlength="1" name="inputNameThree" type="text" oninput="checkForEmptyValue(this, document.formName.inputNameTwo);" />
+        </form>
+      </div>
+
+      <!--Verify button-->
+      <div class="d-flex justify-content-center">
+        <button class="verify-button py-3">Verify</button>
+      </div>
+
+      <!--Resend verification code-->
+      <div class="d-flex justify-content-center">
+        <div class="text-center">
+          <p class="resend-code-information">Didn't recieve code?</p>
+          <p class="resend-code-link"><a href="index.html">Resend code</a></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+      function autotab(current, to) {
+        if (
+          current.getAttribute &&
+          current.value.length == current.getAttribute('maxlength')
+        ) {
+          to.focus()
+        }
+      }
+      function checkForEmptyValue(current, to) {
+        if(!current.value) {
+          to.focus()
+        }
+      }
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

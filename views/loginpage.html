@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginPage</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="handlers/assets/fonts/montserrat-cufonfonts-webfont/style.css"/>
+  <link rel="stylesheet" href="handlers/assets/fonts/inter-cufonfonts-webfont/style.css"/>
+  <link rel="stylesheet" href="handlers/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="contdwatchApp.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="handlers/css/authenti_reg.css"/>
+    <script type="text/javascript">
+    $(document).bind("mobileinit", function(){
+        $.mobile.defaultDialogTransition = 'slide';
+    });
+     function displayError(){
+	     getError = document.getElementById("error");
+	    if( getError.style.display == "none"){
+		getError.style.display = "flex";
+	    }else{
+		getError.style.display = "none";
+	   }
+    }
+    </script>
+</head>
+<body class="coverPage">
+    <div class="container">
+
+        <!-- The Logo Area -->
+        <header>
+            <div class="text-center mt-4">
+                <img src="handlers/assets/images/whatchapp.png" class="mt-4" alt="WatchAppLogo" style="height: 35%; width: 35%; padding-top: 10%;" onclick="displayError()">
+            </div>
+            <p class=" account text-center fontBold" style="font-size: 5vw;">Hello, Login now</p>
+        </header>
+
+        <!-- The Number Input and Login Section -->
+        <section>
+            <form action="index.php">
+                <div class="form-group">
+                    <div class="relativeinput nigNumber fontRegular" >
+                        <span class="text-light fontBold">+234 </span>
+                        <img src="handlers/assets/images/Nig-flag.png" alt="nigerianFlag" style="height: 15px; width: 20px;" class="">
+                        <input type="tel" class="form-control form-control-md" id="phoneLogin" name="phone"  placeholder="Your Phone Number" onfocus="this.placeholder=''" onblur="this.placeholder='Your Phone Number'" style="padding:15px; margin:0px;">                       
+                        <i class="fa fa-phone icon inputNumber text-light"></i>
+                    </div>
+                        <input type="submit" class="form-control form-control-lg btn btn-primary bg-primary-override fontRegular" id="signUp" value="Login" onclick="displayError()">
+                </div>
+            </form>
+        </section>
+
+            <div class="text-center text-light fontRegular mt-0" style="font-size: 3.5vw; padding-bottom: 2%;">Don't Have an Account? <a href="signup.html" class="text-primary-override">Create Account</a></div>
+        
+
+        <!-- The Error Message -->
+        <div id="error" class="hideError">
+            <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="55" height="55" fill="url(#pattern0)"/>
+                <rect x="0.5" y="0.5" width="54" height="54" stroke="#006CB4" stroke-opacity="0.1"/>
+                <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_259:1519" transform="scale(0.00195312)"/>
+                </pattern>
+                <image id="image0_259:1519" width="512" height="512" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAC/VBMVEUAAAD/AAD/AAD/AAC/Pz/MMzPUKiraJCTfHx/iHBzMMz
+                PQLi7UKirXJyfaJCTdIiLPLy/SLS3UKirWKCjYJibaJCTcIiLSLCzUKirWKCjXJyfZJSXaJCTTKyvUKirVKSnXJyfYJibZJSXaJCTUKirVKSnWKCjXJyfYJibZJSXUKirVKSnWKCjXJyfYJibZJSXUKirVKSnWKCjXKCjXJyfYJibZJSXVKSnWKCjX
+                JyfYJibYJibVKSnVKSnWKCjXJyfXJyfYJibVKSnVKSnWKCjWKCjXJyfYJibYJibVKSnWKCjWKCjXJyfXJyfYJibVKSnWKCjWKCjXJyfXJyfYJyfYJibVKSnWKCjWKCjXJyfXJyfYJibVKSnWKCjWKCjXJyfXJyfXJyfVKSnWKCjWKCjXKCjXJyfX
+                JyfYJibWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfVKSnWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJ
+                yfWKCjWKCjWKCjXKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjWKCjXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfW
+                KCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfXJyfW
+                KCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjXJyfXJyfXJyfWKCjWKCjWKCjm5ubXKCha6kPdAAAA/XRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyAhIiMkJSYnKCkqKywtLi8wMTIzNDU2Nzk6Ozw9Pj9AQUJD
+                REVGR0hJSktMTU5PUFFSU1RVVldYWVpbXF1eX2BhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ent8fX5/gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXmJmam5ydnp+goaKjpKWmp6ipqqusrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfI
+                ycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+haFYYAAAE49JREFUeAHtwQ9813WdB/DXNtiGDPmrgFhGmn9BUdPqPEUdev5B0yDtUlRAtLTGlYHVlVNAZ9bdUV5IZ2cttBMTlTpTwL9gR
+                hyoBOiZ4L9TRNzGBoP9+71fj3sgIv/G2Hv7/fl+3p/384lodD1o2FlfnjD5thn3PTzvuSWvrqmqqqpqJMnGqqqqqtWvLnlu3sP3/fzWSRNGjzjuoC5wRhxw/AXXV8x6csU6qqz765O/qbh+5LB+cGEqGDzi2h/PWV7PTqp/ac4d15R+Kh8uG
+                AeVls1cuJFp1bBidvnoYwrgEq3rMWOmL9zEjGlcUVl2yn5wCVQwdPzdLzUxC5pe/I9xQ/LhkmP/c6c9Ucus2jB/6jk94HKvR2nFwkbmRPOKmaP7weVOtxE/WpZiTrUsvb20GC4Hjps0bzMTof6xG4bCZVNx6fQ3mCivzxxZDJcVfcc+tJE
+                JtPHBK/vAZVi/MXMbmVjNC8sGwmVM/28828KEa376ugPgMqDb6LmNDELzwgk94NKqy/n31zMgm357XgFcuhxR/gaD8870Y+HSoMfVzzFQC8eVwHXOkRVVDFjtzOPgOqxw9DwGb8mEbnAdcdDUdTThvSkD4bROmLmZZjTM/j
+                ycQv6oRTTm2Yvz4dqncMwqGvRaWTHcvvUoe5tGrS3vBde2PlNqaFj1zb3h9q5veTWNq6voA9e6fuU1jEDd9P5weyqZXMNI1FX0hNtV4YS1jMj6ycVwO3S5+i1G5o2xBXAfKX2JEVp1DtxWR/+BkZp7KNyge1oYrS2374+4dS2rZdTWlx
+                UgYmeuYPSWnopYHTqbjuTcwYhR1+9tpvtQ/aQuiM6wJXQfe/EkxKVbRTPdTpqmd0dETn2FbjevlSIWvWam6PY0uy+iMPJtulatHQP7Bs2l26uHBsK4i9bTtaH6UljWbTrdPlSWwKzPvkK3T6s/D5vyyhro2qGpvAAGffIpunZ6bjDMGfUBXb
+                vVfBW27F9Jp3JPCQw5YgWd0ivHwIwLaujUakfBhoKKFF0HpKZ3gQH9HqfroKf6I3gnrKHrsLc+h8CNqafrhC1XI2RFv6DrpMpuCNZBi+k67fkBCNSQN+jS4O1hCFJpDV1a1J6DAF3VSJcmTdcgNHnldGk0PQ9BKZpFl1azixGQPk/Rpdm
+                ifgjGp1fRpd2rn0EgTl5HlwFrT0QQhm+gy4i60xGAkZvpMmTTWUi8y5roMqbhIiTcP6XoMqjxEiTad+gyq3kcEmwyXaalJiKxyumy4CYk1BS6rKhAIk2jy5JbkEBT6LLmRiTOD+my6Fthandlers/assets/images/TZVPqaiTKRLrsar4ECXJ5ii7LGkciMS5sosu6hnO
+                QEGdspsuBTaciEU6uo8uJmhORAIPfo8uR9w9DzvV5mS5nVvVGjhUuoMuhp4uQU3mVdDn12zzk0jS6HCtHDo2ly7XUFciZ4Q10OddYihw5upouATYMRU4MfIMuEdYMQA4UL6ZLiD8VIfvupkuMu5B1E+gSZByy7OQtDIsoMSybP4us6
+                ruGgRElBuaNfsiigscYGlFiaOYXIHvuYHBEicGZhqz5YorBESUGJzUKWXLEBoZHlBie2qORFfu/zACJEgO0ogTZUMkQiRJDdDeyYBSDJEoM0iXIuIM/YJBEiUGq/iQyLP8JhkmUGKanC5BZ32egRImBmoSMOrGBgRIlBqrxZGRQ95cZKlFiq
+                F4tQebczWCJEoM1AxlzEcMlSgzXhciQQesZLlFiuN4fiMx4iAETJQbs98iISxkyUWLI/hEZ0GctQyZKDNn6/ki/XzFoosSgPYS0Oz3FoIkSwzYKabbf3xg2UWLY1vZGev2EgRMlBm4G0uqkZgZOlBi4li8gjbosZehEiaFb3hXp8z0GT5QYvMlI
+                m0M3M3iixOBtOgTp8gjDJ0oM3wNIk7NogCjRgLORFoUv0wBRogEruyIdvksLRIkWfAtpMKiOFogSLdjQH533K5ogSjRhJjrtuBaaIEo0oXkoOmsebRAl2rAAnXQ+jRAlGnE2OqXLShohSjRieQE6YwKtECVacSU6ofhNWiFKtOL1InTcDTRDl
+                GjGN9FhPd6jGaJEM9b1QEdNoR2iRDv+GR3Ur5Z2iBLtqOmNjqmgIaJEQ25Gh/StpSGiREM29EZH3EpLRImWlKMD+tTSElGiJTW9oTeVpogSTbkJavtX0xRRoilVJdC6kbaIEm35BpSK3qEtokRbVneBzjU0RpRozGioFPwvjRElGrMYKqNoj
+                SjRmlOg8RytESVaMwcKJ9IcUaI1qaPQfvfSHFGiOTPQbgc10BxRojmb+6O9ptEeUaI9N6GditbRHlGiPe8VoX0uo0GiRIO+gvZZRINEiQY9jXY5lhaJEi0agvaYQYtEiRZNRzuUbKBFokSLarpj366mSaJEk67Evv2JJokSTXoa+3REiiaJEk1KH
+                YZ9+RFtEiXaNBX70OUd2iRKtOntArRtJI0SJRp1Nto2m0aJEo2ahTb1qKdRokSjNpagLVfQKlGiVV9BWx6jVaJEqx5BGw5solWiRKsa+2LvvkmzRIlmXYu9W0izRIlmLcBeDWihWaJEs5oPxN58nXaJEu0aj71ZQLtEiXY9ir3o20S7RIl2NfZG6
+                66iYaJEwy5H6x6mYaJEwx5Aq4rqaJgo0bC6IrTmXFomSrSsFK35OS0TJVr2r2jN67RMlGjZa2jFsTRNlGjakdjTJJomSjRtIvY0j6aJEk37A/ZQXE/TRImmbSzC7s6ibaJE24Zjd3fQNlGibdOwuxdomyjRtsXYTZ8W2iZKtK2lF3b1RRonSjTuPOz
+                qX2icKNG427Gr/6FxokTjnscu9m+mcaJE45p6YGfn0jpRonUjsLNbaZ0o0bpbsLMnaJ0o0brHsJP8DbROlGhdTT52OJbmiRLNOxo7XE3zRInmjcUOd9M8UaJ5M7HDSzRPlGjeC/hYcRPNEyWa11iM7U6mfaJE+07AdtfQPlGifeOw3V20T5
+                Ro353YbjHtEyXatwgfKainfaJE++rysc3hjIAoMQKDsc1FjIAoMQLnY5vvMwKixAhMwjb3MgKixAj8CtssYwREiRFYjA/l1zMCosQI1OVhq8GMgSgxBgdjqxGMgSgxBsOx1dcYA1FiDMZjqx8zBqLEGNyGrR5iDESJMXgAW/2VMRAlxmAZAORt
+                YgxEiTGoBYADGAVRYhR6AziBURAlRuFYABcyCqLEKJwH4HpGQZQYha8BuJ1RECVG4VYA9zIKosQo/AbAk4yCKDEK8wGsZBREiVFYDuADRkGUGIX3gK4pRkGUGIWWLhjEOIgS49AfxzMOosQ4HIuzGAdRYhzOxCWMgygxDl/CNYyD
+                KDEO43Ej4yBKjMMNuI1xECXGYQpmMA6ixDjcifsYB1FiHGbhEcZBlBiHOZjPOIgS4/AYFjEOosQ4PINljIMoMQ5L8ArjIEqMw0q8yTiIEuOwBusYB1FiHNaiinEQJcZhPWoZB1FiHKqxiXEQJcahDlsYB1FiHOrRxDiIEuPQiBTjIEqMQwtSjIMoMQ4
+                taGIcRIlxaMQWxkGUGId6bGIcRIlxqEMt4yBKjEM1qhgHUWIc1mMd4yBKjMNavMk4iBLjsAavMA6ixDisxDLGQZQYhyVYxDiIEuPwDOYzDqLEODyGRxgHUWIc5uA+xkGUGIdZ+DnjIEqMw09xK+MgSozDLZjEOIgS4/BtTGAcRIlxGIsvMw6i
+                xDhcjBGMgygxDmdiGOMgSozDEAxkHESJcTgQXVoYBVFiFJoLgPcZBVFiFNYCWMEoiBKj8CKAJxgFUWIU5gG4l1EQJUahEkAFoyBKjMJUANcxCqLEKFwD4AJGQZQYhXMBHM8oiBKjMARAX0ZBlBiFngCwiTEQJcZgA7ZazhiIEmOwFF
+                vNYQxEiTGYja3uYAxEiTG4FVtdyxiIEmMwDluNYAxEiTEYjq0GMwaixBgcjK3y6xkBUWIE6vLwoaWMgCgxAn/GNrMYAVFiBO7BNt9jBESJEfgOtvkiIyBKjMB52OZwRkCUGIHB2KZgE+0TJdpXl4+PPE/7RIn2PYvtZtA+UaJ9P8V2E+giNBbb
+                fZYuQsdju6JGuug0FOFjL9JFZxl2+AVddGZgh3F00bkSOwyhi86R2CG/hi4y1fnYyXy6yDyKnU2li0w5dnYOXWRKsbMeTXRRaeyOXfyFLirPYVc/oYtKBXZ1IV1UzsWu+rTQRaS5F3azlC4if8bubqeLyFTsrpQuIqdhd8X1dNHYWIQ9PE4Xjbn
+                Y03foovFN7GkIXTSOQCtW00Xib2jNz+gi8RO05h/oInEGWlNUSxeFDYVo1YN0UbgfrbuSLgqXoXW9Gugi0NAbe/E4XQR+j725hi4CV2Fv+jfTmdfUD3v1NJ15j2PvrqczbwL27oAmOuMa+qINj9IZ9xDacjmdcZegLd030pm2sTva9F90plWi
+                befRmTYCbSt4i86wtwqwDxV0ht2CfTk8RWdW6lDs0yI6s57Evo2jM2sM9q1kA51R1fuhHf6dzqh/Q3scnaJBokSLjkG7PEuDRIkGPYn2+SoNEiUadAnap2gd7REl2rO2EO10C+0RJdpzE9prYAPNESWas2UA2u03NEeUaM5/ov1OoDmiRHO
+                GQeFZWiNKtGYBNC6mNaJEa0ZCI38FjRElGrMyHyrjaIwo0Zgx0On6Jm0RJdryViGUbqAtokRbyqDVo4qmiBJN+aAEajfTFFGiKT+AXs9qWiJKtKSmFzpgCi0RJVryQ3REr2oaIko0pKYXOmQaDRElGnITOqbvBtohSrSjqhc66CbaIUq047vo
+                qJK1NEOUaMZ7PdBhE2mGKNGM69BxhatphSjRijVF6ISxtEKUaMUYdEbBizRClGjEsgJ0yuk0QpRoxGnopDm0QZRow/3orE9voQmiRBM2fwqddjtNECWaMAWd1+MdWiBKtODtEqTBOFogSrTgMqRD/mIaIEo04Pk8pMUXUgyfKDF8qVO
+                QJvczfKLE8FUiXQ6pZ/BEicGrG4S0mczgiRKDNxHp02UJQydKDN3iAqTRcY0MnCgxcE3HI61uZ+BEiYGbgvTq9irDJkoM2yvFSLPhKQZNlBi01BlIu18yaKLEoM1A+vV8myETJYbsnV7IgNEMmSgxZBchI+YwYKLEgD2AzBj4PsMlSgzXe/2R
+                IRfSJV9qJDJmJl3i3YnM2W8VXcKt3A8ZdEIDXaJtGYaMupEu0b6FzMpfQJdgj+cjwwZ9QJdYVZ9Axl1Ml1ijkQX30CXUTGRDyQq6RHqpO7Li8Bq6BKo+DFlyQYoucVIXIWtupUucm5E9+Y/SJczjBciiPqvpEuX1fsiqYfV0CbL5RGTZ5XQJch
+                Wy7i66xPgZsq/oebqEWFSIHBjwOl0irO6PnDiqii4BaoYgR07bQpdzjWciZ76Sosux1Bjk0M10OfYD5FLer+ly6r485FTX+XQ59FQRcqzncrqcWdEbOfeptXQ58u4hSIATa+hyonoYEuHzdXQ5sOnvkRBnbqbLuvrTkRhnb6HLssbzkSAXN9FlVf
+                OlSJQrWuiyKDUeCXMdXfakvo7EmUiXNZORQFPosqQciTSZLisqkFCT6LLgB0isa1voMixVhgT7ahNdRjVfhUT7ciNdBjWMQsKdV0+XMVsuROKdVkuXIRtLEYCTPqDLiOovIAgnrqXLgHePRyAGr6RLu78egmD0foIuzRb0QkAKf02XVvcUIih5
+                5Sm6tEmV5yE0VzTQpUnD5QjQGdV0aVE1HEE6eg1dGqw+CoEa8Ce6Tlt0IILVpYKuk2YWImSXbaLrhM1jEbhhq+k67I2TELy+f6TroP/uAwPyJrfQdUCqIh82nF9Np7bhIpjxmeV0SquOgiElv6RT+UV32HLxerp2q74U5gx4lK6d5g+CQXllW+j
+                aobE8HzYNeYlun1YeD7O6TU/Rta2yOyw7+126NqwbCeMGPky3V7/rD/tGv0/XqndHIQoHVtLtKVXZB7EY9S7dbl4+FRHpOb2ZbidNFcWIywlL6D629EREp+vkTXQf2jixADEaVElHpmYfglidvpzR+8vfIWJdymoYtf+bkI+49Z/ZzGhtntod7sjZj
+                NTcwXBblb7ACC09Fe4jBVe9zsisHpMPt0PhhHcZkfcnF8PtqvvkakaitmJ/uD31mFzNCNRW9IZrXY/JVTSutqI33N71uukDGrb+Bz3h2lY85mUa9W55T7h9yx+5iAa9WlYE106nzGmhLU+MzINT+PT0TTSjYfbn4LQO+OF7NGFteX+4jigcPS/F
+                0C2Z0A2uw46oWM+A1cwcCtc53a98JsUgpZ4asx9cGnxi8moG5+2Kw+DSJf/sWRsZkNrKEflwaVU8cnYDg9A8b0wJXAb0vWZBMxOuad7VfeAyps+YuQ1MrOaFZf3hMqzX5b+rZQJtmH1ZT7isKDilYiUT5bWZIwvhsunIiX/YyESo+33Z4X
+                A5UDj81r80M6eaF089rRAud0pKy+c1MCeal0wf3Qcu90rOuuWxGmZV9R/LS7vDJUf+0VfNfKGRWdC47K4rj8qDS6Cux4yZvrCOGVO3pLLslG5wyXZQadnMhbVMqy0rZpePPiYfLhR5nzh9fMXvltWykzYse+C28cMPzoMLU++h539tWuX
+                85WtbqNCydvn8ymnXnj+0F5wRBQOGnjFq/A1T75z14Lxnl6x6bX1VVVU9SdZXVVWtf23VkmfmPTjrzqk3jPvSGUMH5CMW/w+fWwXXom2wewAAAABJRU5ErkJggg=="/>
+                </defs>
+            </svg>
+            <span class="text-light text-center" style="margin-top: 20px;">Phone Number <br> does not exist</span>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="jsfont6/all.js"></script>
+</body>
+</html>

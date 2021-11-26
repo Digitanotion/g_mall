@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SignUpPage</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="handlers/assets/fonts/montserrat-cufonfonts-webfont/style.css"/>
+  <link rel="stylesheet" href="handlers/assets/fonts/inter-cufonfonts-webfont/style.css"/>
+  <link rel="stylesheet" href="handlers/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="contdwatchApp.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="handlers/css/authenti_reg.css"/>
+    <script type="text/javascript">
+      $(document).bind("mobileinit", function(){
+        $.mobile.defaultDialogTransition = 'slide';
+    });
+       function hideIcon(){
+        var dediv = document.getElementsByClassName('relative');
+        var icons = document.getElementsByClassName('icon');
+        dediv.style.focus = icons.style.display(none);
+       }
+    </script>
+</head>
+<body class="coverPage" id="body">
+        <page class="container" id="signUpPage" data-role="page" data-theme="b">
+
+            <!-- Header containing the image and the text -->
+            <header>
+                <div class="text-center mt-4">
+                    <img src="handlers/assets/images/whatch-app-logo.png" alt="WatchAppLogo" class="img-fluid mt-4" style="width: 35%; ">
+                </div>
+                <p class="account text-center fontBold mt-3" style="font-size: 5vw;">Create Account</p>
+            </header>
+
+            <!-- The Input Section -->
+            <main data-role="main" id="mobile-body">
+                <form action="" method="post">
+                    <div class="form-group" >
+                        <!-- Full Name Input -->
+                        <div class="relativeinput fontRegular">
+                            <input type="text" class="form-control form-control-md p-3" style="background-color: rgba(37, 37, 37, 0.1);" id="person-icon" name="person" placeholder="Full Name" onfocus="this.placeholder=''" onblur="this.placeholder='Full Name'">
+                            <i class="fa fa-user-alt fa-pull-right icon"></i><!--<img src="img/Path.png" alt="" class="icon">-->
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="relativeinput fontRegular">
+                            <input type="email"class="form-control form-control-md p-3" style="background-color: rgba(37, 37, 37, 0.1);" id="message-icon" name="message" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" >
+                            <i class="fa fa-envelope fa-pull-right icon"></i>
+                            <!--<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0246 4.17683C20.2383 4.46 20.1708 4.85473 19.8718 5.0579L12.7895 9.89368C12.4818 10.1052 12.1186 10.2105 11.7566 10.2105C11.3968 10.2105 
+                                11.0358 10.1063 10.7281 9.89788L3.59927 5.05894C3.30146 4.85685 3.2317 4.46211 3.44428 4.1779C3.65794 3.89368 4.07311 3.82735 4.37094 4.03159L11.4986 8.86946C11.6525 8.97367 11.8595 8.97474 
+                                12.0146 8.86842L19.098 4.03263C19.3958 3.82735 19.8109 3.89473 20.0246 4.17683ZM22.1426 13.2631C22.1426 14.0758 21.4462 14.7379 20.5926 14.7379H2.87852C2.02383 14.7379 1.32855 14.0758 
+                                1.32855 13.2631V2.73683C1.32855 1.92421 2.02383 1.26316 2.87852 1.26316H20.5926C21.4462 1.26316 22.1426 1.92421 22.1426 2.73683V13.2631ZM20.5926 0H2.87852C1.29091 0 0 1.22842 0 
+                                2.73683V13.2631C0 14.7726 1.29091 16 2.87852 16H20.5926C22.1791 16 23.47 14.7726 23.47 13.2631V2.73683C23.47 1.22842 22.1791 0 20.5926 0Z" fill="white" fill-opacity="0.8"/>
+                            </svg>-->
+                        </div>
+
+                        <!-- Phone Number Input -->
+                        <div class="relativeinput fontRegular">
+                            <input type="tel" class="form-control form-control-md p-3" style="background-color: rgba(37, 37, 37, 0.1);" id="phone-icon" name="phone" placeholder="Phone Number" onfocus="this.placeholder=''" onblur="this.placeholder='Phone Number'">
+                            <i class="fa fa-phone fa-pull-right icon"></i>
+                            <!--<svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6281 21.9102C21.6281 22.1808 21.4395 22.4128 21.1892 22.4502C18.9096 22.7887 16.5935 22.6743 14.3391 22.1117C7.87207 20.4838 2.89915 
+                                15.2309 1.66907 8.72376C1.46901 7.71396 1.37184 6.68377 1.37184 5.57434C1.37184 4.26906 1.51702 2.98301 1.80397 1.75245C1.8577 1.52377 2.08291 1.35849 2.34127 1.35849H6.24757C7.23186 
+                                1.35849 8.03324 2.15094 8.03324 3.12678V5.12603L5.716 6.10869C4.8986 6.45508 4.41845 7.31773 4.57508 8.15999C5.53765 13.3653 9.4771 17.6807 14.6123 19.1536C15.5555 19.4253 16.5604 18.9622 
+                                16.9433 18.0792L17.8236 16.0449H19.8425C20.8268 16.0449 21.6281 16.8385 21.6281 17.8132V21.9102ZM19.8425 14.6864H17.3709C17.0965 14.6864 16.8485 14.8483 16.7399 15.0973L15.6824 
+                                17.5449C15.5727 17.7996 15.2777 17.9298 14.9942 17.8494C10.3539 16.5181 6.79404 12.6181 5.92405 7.91434C5.88289 7.69018 6.02237 7.45585 6.25673 7.35737L8.98895 6.19925C9.2416 6.0917 
+                                9.40509 5.84603 9.40509 5.57434V3.12678C9.40509 1.40264 7.98867 0 6.24757 0H2.34127C1.45072 0 0.663055 0.609055 0.467569 1.44792C0.157761 2.77698 0 4.16603 0 5.57434C0 6.77321 0.105174 
+                                7.88829 0.321239 8.97962C1.64849 15.9985 7.01808 21.6702 14.0019 23.4283C15.5201 23.8075 17.0691 24 18.6067 24C19.5315 24 20.4678 23.9298 21.3915 23.7928C22.3084 23.657 23 22.8487 23 
+                                21.9102V17.8132C23 16.0891 21.5836 14.6864 19.8425 14.6864Z" fill="white" fill-opacity="0.8"/>
+                            </svg>-->
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="relativeinput fontRegular">
+                            <input type="password" class="form-control form-control-md p-3" style="background-color: rgba(37, 37, 37, 0.1);" id="password-icon" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
+                            <i class="fa fa-eye fa-pull-right pull-right icon"></i>
+                            <!--<svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 9.36629C10.1888 9.36629 9.12152 8.29896 9.12152 6.98779C9.12152 5.67666 10.1888 4.6093 11.5 4.6093C12.8111 4.6093 13.8785 5.67666 13.8785 6.98779C13.8785 8.29896 
+                                12.8111 9.36629 11.5 9.36629ZM11.5 3.42007C9.5328 3.42007 7.93226 5.02058 7.93226 6.98779C7.93226 8.95501 9.5328 10.5555 11.5 10.5555C13.4672 10.5555 15.0677 8.95501 15.0677 6.98779C15.0677 5.02058 13.4672 3.42007 
+                                11.5 3.42007ZM21.7513 7.19197C19.4917 10.6953 15.6604 12.7864 11.5 12.7864C7.33962 12.7864 3.50827 10.6953 1.2497 7.19197C1.17042 7.07007 1.17042 6.90555 1.2497 6.78364C3.50827 3.28034 7.33962 1.19024 11.5 
+                                1.19024C15.6604 1.19024 19.4917 3.28034 21.7513 6.78465C21.8296 6.90653 21.8296 7.07007 21.7513 7.19197ZM22.7503 6.13949C20.2726 2.29524 16.0657 0 11.5 0C6.93428 0 2.72833 2.29524 0.249741 6.13949C-0.0832471 
+                                6.65482 -0.0832471 7.32079 0.249741 7.83711C2.72833 11.6804 6.93428 13.9756 11.5 13.9756C16.0657 13.9756 20.2726 11.6804 22.7503 7.83711C23.0832 7.32178 23.0832 6.65482 22.7503 6.13949Z" fill="white"/>
+                            </svg>-->
+                        </div>
+
+                        <!-- Confirm Password Input -->
+                        <div class="relativeinput fontRegular">
+                            <input type="password" class="form-control form-control-md p-3" style="background-color: rgba(37, 37, 37, 0.1);" id="con-password-icon" name="con-password" placeholder="Confirm Password" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm Password'">
+                            <i class="fa fa-eye-slash fa-pull-right icon"></i>
+                        </div>
+                             <!-- CheckBox -->
+                        <div class="d-flex flex-row justify-content-center fontRegular" >
+                             
+                            <label class="text-light text-center" for="box" style="padding-top: 5px;font-size: 3.5vw;"><input type="checkbox" class="" id="box"> I agree with all <a href="#" class="text-primary-override">Terms of Use</a> & <a href="#" class="text-primary-override">Privacy Policy</a></label>
+                        </div>
+                        <!-- Sign Up Button -->
+                        <input type="submit" style="z-index: 1001;" data-transition="slide" class="form-control mt-3 btn-primary bg-primary-override fontRegular" id="signUp" value="Sign Up" >
+
+                       
+                    </div>
+                </form>
+            </main>
+
+            <footer>
+                <div class="text-center text-light fontRegular" style="font-size: 3.7vw; padding-bottom: 2%;">Already Have an Account? <a href="OnboardingPage.html" class="text-primary-override" data-transition="slide">Login here</a></div>
+            </footer>
+        </page>
+    
+</body>
+</html>
