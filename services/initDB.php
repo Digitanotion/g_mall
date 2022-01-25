@@ -1,6 +1,6 @@
 <?php
 //error_reporting(0);
-require_once("system_config.php");
+require_once("configGlobal.php");
 class InitDB{
     public $pdo;
     public function __construct($db, $username = NULL, $password = NULL, $host)

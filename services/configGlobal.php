@@ -1,5 +1,4 @@
 <?php
-
     define('DB_OPTIONS', 
     [
     "root",
